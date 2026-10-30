@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomanga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Publicar Anime / Manga</h1>
+        <p class="subtitle">Compartí tus obras favoritas con la comunidad otaku.</p>
+
+        <form action="#" method="POST" class="recommendation-form">
+            
+            <!-- Título -->
+            <div class="form-group">
+                <label for="title">Título de la obra:</label>
+                <input type="text" id="title" name="title" placeholder="Ej: Attack on Titan, Berserk, Jujutsu Kaisen..." required>
+            </div>
+
+            <!-- Formato -->
+            <div class="form-group">
+                <label for="format">Formato:</label>
+                <select id="format" name="format" required>
+                    <option value="" disabled selected>Selecciona el formato</option>
+                    <option value="anime_tv">Anime (Serie TV)</option>
+                    <option value="movie">Película Anime</option>
+                    <option value="manga">Manga</option>
+                    <option value="manhwa">Manhwa / Webtoon</option>
+                    <option value="ova">OVA / Especial</option>
+                </select>
+            </div>
+
+            <!-- Género -->
+            <div class="form-group">
+                <label for="genre">Demografía / Género:</label>
+                <select id="genre" name="genre" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="shonen">Shonen</option>
+                    <option value="seinen">Seinen</option>
+                    <option value="shojo">Shojo</option>
+                    <option value="josei">Josei</option>
+                    <option value="isekai">Isekai</option>
+                    <option value="slice_of_life">Slice of Life / Comedia</option>
+                    <option value="fantasy">Fantasía / Acción</option>
+                </select>
+            </div>
+
+            <!-- Estado -->
+            <div class="form-group">
+                <label for="status">Estado de emisión/publicación:</label>
+                <select id="status" name="status" required>
+                    <option value="ongoing">En emisión / En publicación</option>
+                    <option value="finished">Finalizado</option>
+                </select>
+            </div>
+
+            <!-- Puntuación -->
+            <div class="form-group">
+                <label for="rating">Puntuación (1 al 10):</label>
+                <input type="number" id="rating" name="rating" min="1" max="10" placeholder="10" required>
+            </div>
+
+            <!-- Capítulos o Tomos -->
+            <div class="form-group">
+                <label for="episodes">Capítulos / Tomos recomendados:</label>
+                <input type="number" id="episodes" name="episodes" min="1" placeholder="Ej: 24 (episodios) o 12 (tomos)">
+            </div>
+
+            <!-- URL de la Portada -->
+            <div class="form-group">
+                <label for="cover_url">URL del poster / portada:</label>
+                <input type="url" id="cover_url" name="cover_url" placeholder="https://ejemplo.com/poster.jpg" required>
+            </div>
+
+            <!-- Reseña -->
+            <div class="form-group">
+                <label for="review">¿Por qué lo recomendás?:</label>
+                <textarea id="review" name="review" rows="4" placeholder="Contá un poco la trama sin spoilers y por qué vale la pena verlo/leerlo..." required></textarea>
+            </div>
+
+            <!-- Checkbox +18 -->
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="is_adult" name="is_adult" value="yes">
+                <label for="is_adult">Contiene gore o temáticas adultas (+18)</label>
+            </div>
+
+            <!-- Botón Envío -->
+            <button type="submit" class="btn-submit">Publicar Recomendación</button>
+
+        </form>
+    </main>
+
+</body>
+</html>
